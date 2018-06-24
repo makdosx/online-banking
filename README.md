@@ -1,6 +1,6 @@
 # online-banking
 This is a online banking system for local businesses. 
-easybank contains a user interface as well as a user authentication system ,br><br>
+easybank contains a user interface as well as a user authentication system <br><br>
 
 1) Install easybank: <br><br>
 
