@@ -20,5 +20,5 @@
  #
  #
 
-chmod -R 777 /var/www/bank0/__TMP__/
+chmod -R 777 /var/www/easybank/__TMP__/
 
