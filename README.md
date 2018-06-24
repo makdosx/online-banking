@@ -132,9 +132,23 @@ It has a money transfer for the same system of your easybank business as well as
 It has information about user moves.
 You can see the representation of your trading live charting.
 It can export the data in pdf format.
-It transfers money to and from bank accounts (stripe) via credit cards from any bank. <br.<br><br>
+It transfers money to and from bank accounts (stripe) via credit cards from any bank. <br><br><br>
 
 
 
 
-![screenshots/000](screenshots/000.png) <br> 
+![screenshots/000](screenshots/000.png) <br><br>
+![screenshots/001](screenshots/001.png) <br><br>
+![screenshots/002](screenshots/002.png) <br><br>
+![screenshots/003](screenshots/003.png) <br><br>
+![screenshots/004](screenshots/004.png) <br><br>
+![screenshots/005](screenshots/005.png) <br><br>
+![screenshots/006](screenshots/006.png) <br><br>
+![screenshots/007](screenshots/007.png) <br><br>
+![screenshots/008](screenshots/008.png) <br><br>
+![screenshots/009](screenshots/009.png) <br><br>
+![screenshots/0010](screenshots/0010.png) <br><br>
+![screenshots/0011](screenshots/0011.png) <br><br>
+![screenshots/0012](screenshots/0012.png) <br><br>
+![screenshots/0013](screenshots/0013.png) <br><br>
+
