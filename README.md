@@ -31,28 +31,28 @@ easybank contains a user interface as well as a user authentication system ,br><
      while ($row3 = $result3->fetch_assoc())
        {
 
-  echo $row3['publishable_key_stripe'] ."<br>" .$row3['secret_key_stripe'];
+      echo $row3['publishable_key_stripe'] ."<br>" .$row3['secret_key_stripe'];
 
-require 'widrawals/stripe/Stripe.php';
+     require 'widrawals/stripe/Stripe.php';
 
-$params = array(
+     $params = array(
 	"testmode"   => "on",
 	"private_live_key" => "sk_live_xxxxxxxxxxxxxxxxxxxxx",
 	"public_live_key"  => "pk_live_xxxxxxxxxxxxxxxxxxxxx",
 	"private_test_key" =>  "{$row3['secret_key_stripe']}",
 	"public_test_key"  =>  "{$row3['publishable_key_stripe']}"
-);
+      );
 
-if ($params['testmode'] == "on") {
+    if ($params['testmode'] == "on") {
 	Stripe::setApiKey($params['private_test_key']);
 	$pubkey = $params['public_test_key'];
-} else {
+    }    else {
 	Stripe::setApiKey($params['private_live_key']);
 	$pubkey = $params['public_live_key'];
-}
+      }
 
-if(isset($_POST['stripeToken']))
-{
+     if(isset($_POST['stripeToken']))
+      {
 	$amount_cents = str_replace(".","",$_POST['amount']);  // Chargeble amount
         $main_amount = $_POST['main_amount'];
         $secondary_amount = $_POST['secondary_amount'];
@@ -117,12 +117,10 @@ if(isset($_POST['stripeToken']))
               echo ("<script>location.href='transac_withdrawals.php'</script>");
                 }
 
+      }
 
-}
 
-
-           
-  } // end of while
+      } // end of while
          
 
  
