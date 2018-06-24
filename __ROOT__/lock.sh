@@ -20,4 +20,4 @@
  #
  #
 
-chmod -R 000 /var/www/bank0/__TMP__/
+chmod -R 000 /var/www/easybank/__TMP__/
