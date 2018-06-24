@@ -1,0 +1,55 @@
+/*
+ * Copyright (c) 2018 Barchampas Gerasimos <makindosx@gmail.com>
+ * online-banking a online banking system for local businesses.
+ *
+ * online-banking is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ *
+ * online-banking is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License, version 3,
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>
+ *
+ */
+
+
+body
+{
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a7cfdf+0,23538a+100;Blue+3d+%238 */
+background: rgb(167,207,223); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(167,207,223,1) 0%, rgba(35,83,138,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', endColorstr='#23538a',GradientType=0 ); /* IE6-9 */
+
+
+}
+      
+  
+.container
+{
+max-width: 500px;
+padding-left: 90px;
+padding-top: 95px;
+}
+
+        
+.btn-default:hover, .btn-default:focus
+{
+background-color: #5cb85c;
+border-color: #5cb85c;
+color: white;
+}
+
+
+.btn-block {
+height: 34px !important;
+}
+
