@@ -151,4 +151,3 @@ It transfers money to and from bank accounts (stripe) via credit cards from any 
 ![screenshots/0011](screenshots/0011.png) <br><br>
 ![screenshots/0012](screenshots/0012.png) <br><br>
 ![screenshots/0013](screenshots/0013.png) <br><br>
-
