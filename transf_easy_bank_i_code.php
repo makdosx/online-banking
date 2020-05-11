@@ -121,7 +121,7 @@ if (time()-$_SESSION['timestamp']>$idletime)
                           $time_db = $row['i_code_time'];
 
                           $time_now = strtotime($time_db);
-                           if (time() - $time_now > 3 * 60) 
+                           if (time() - $time_now > 10 * 60) 
                                {
                                
                              /*

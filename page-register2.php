@@ -40,19 +40,16 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> Easy bank </title>
+    <title> Easybank </title>
     <meta name="description" content="Sufee Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
+     <link rel="shortcut icon" href="favicon.png" type="image/png">
  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
-    <link rel="apple-touch-icon" href="apple-icon.png">
-    <link rel="shortcut icon" href="favicon.ico">
 
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -71,8 +68,8 @@
 <style>
 body {
     background-image: url("/images/bg1.jpg");
-    background-repeat: no-repeat, repeat;
-    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 
@@ -141,23 +138,29 @@ window.onload=changeHashOnLoad;
         <div class="container">
             <div class="login-content">
                 <div class="login-logo">
-                    <a href="index.php">
-                      <!--  <img class="align-content" src="images/logo.png" alt=""> -->
-                      <h2 align="center"> <font color="white"> <b> EASY BANK ACCOUNT </b> </font> </h2>
-                    </a>
+                    <img src="images/logo4.png" height="130" width="27%">
+                    <img src="images/bg5.png" height="130" width="33%">
+                    <img src="images/logo5.png" height="130" width="27%">
                 </div>
-                <div class="login-form"  style="width: 750px; position: relative; left: -20%;">
+                <div class="login-form"  style="width: 750px; position: relative; left: -20%;
+                                                background-color:white; 
+                                                border-style:solid; border-width:0.5em; 
+                                                border-radius: 2em;">
                     <form action="" method="post">
-
+                       
+                      <h3 align="center"> 
+                         <font color="black"> <b> <i> 
+                            &dollar; &dollar; EASYBANK ACCOUNT &euro; &euro; 
+                         </i> </b> </font>
+                       </h3> <hr>
                       
-                      <h2 align="center"> <font color="black"> <b> Step 2: Personal details </b> </font> </h3>
-                          <hr>
+                      <h3 align="center"> <font color="black"> <b> Step 2: Personal details </b> </font> </h3>
 
                       <div class="form-group">
                             <label>First & Last Name</label>
                             <span class="glyphicon glyphicon-user"></span> <br>
-   <input type="text" class="form-control col-sm-6" name="first_name" placeholder="First Name" pattern="[A-Za-z]{1,32}" title="Only characters" required>
-   <input type="text" class="form-control col-sm-6"  name="last_name" placeholder="Last Name" pattern="[A-Za-z]{1,32}" title="Only characters" required>
+   <input type="text" class="form-control col-sm-6" name="first_name" style="font-size:17px; font-weight:bold;" placeholder="First Name" pattern="[A-Za-z]{1,32}" title="Only characters" required>
+   <input type="text" class="form-control col-sm-6"  name="last_name" style="font-size:17px; font-weight:bold;" placeholder="Last Name" pattern="[A-Za-z]{1,32}" title="Only characters" required>
                             <br><br>
                         </div>
 
@@ -165,9 +168,9 @@ window.onload=changeHashOnLoad;
                          <div class="form-group">
                            <label>Date of birth</label>
                           <span class="glyphicon glyphicon-calendar"></span> <br>
-                    <input type="text" class="form-control col-sm-3" name="day" placeholder="DD" pattern="[0-9]{1,2}" title="Only numbers" required>
-                    <input type="text" class="form-control col-sm-4" name="month" placeholder="MM" pattern="[0-9]{1,2}" title="Only numbers" required>
-                    <input type="text" class="form-control col-sm-5" name="year" placeholder="YYYY" pattern="[0-9]{4}" title="Only numbers" required>
+                    <input type="text" class="form-control col-sm-3" name="day" style="font-size:17px; font-weight:bold;" placeholder="DD" pattern="[0-9]{1,2}" title="Only numbers" required>
+                    <input type="text" class="form-control col-sm-4" name="month" style="font-size:17px; font-weight:bold;" placeholder="MM" pattern="[0-9]{1,2}" title="Only numbers" required>
+                    <input type="text" class="form-control col-sm-5" name="year" style="font-size:17px; font-weight:bold;" placeholder="YYYY" pattern="[0-9]{4}" title="Only numbers" required>
                          <br><br>
                         </div>
 
@@ -175,14 +178,14 @@ window.onload=changeHashOnLoad;
                          <div class="form-group">
                            <label>Nationality</label>
                           <span class="glyphicon glyphicon-globe"></span> <br>
-              <input type="text" class="form-control" name="nationality" placeholder="Nationality" pattern="[A-Z]{1,16}" title="Only uppercase" required>
+              <input type="text" class="form-control" name="nationality" style="font-size:17px; font-weight:bold;" placeholder="Nationality" pattern="[A-Z]{1,16}" title="Only uppercase" required>
                         </div>
 
                      
                          <div class="form-group">
                            <label>ID document number</label>
                           <span class="glyphicon glyphicon-picture"></span> <br>
-     <input type="text" class="form-control" name="identity_number" placeholder="Identity Number" pattern="[A-Z0-9]{1,16}" title="Uppercase and Numbers" required>
+     <input type="text" class="form-control" name="identity_number" style="font-size:17px; font-weight:bold;" placeholder="Identity Number" pattern="[A-Z0-9]{1,16}" title="Uppercase and Numbers" required>
                             <br>
                         </div>
 
@@ -195,11 +198,11 @@ window.onload=changeHashOnLoad;
                             <label>Street / </label>
                             <label>Number/ </label>
                              <label>Post code </label> <br>
-   <input type="text" class="form-control col-sm-2" name="country_code" placeholder="Country Code" pattern="[A-Z]{2,3}" title="Only uppercase" required>
-   <input type="text" class="form-control col-sm-3" name="city" placeholder="Town/City" pattern="[A-Za-z]{1,32}" title="Characters and Numbers" required>
-   <input type="text" class="form-control col-sm-3" name="street" placeholder="Street" pattern="[A-Za-z]{1,32}" title="Characters and Numbers" required>
-   <input type="text" class="form-control col-sm-2" name="number" placeholder="Number" pattern="[0-9]{1,16}" title="Only Numbers" required>
-   <input type="text" class="form-control col-sm-2" name="post_code" placeholder="Post Code" pattern="[0-9]{1,16}" title="Only Numbers" required>
+   <input type="text" class="form-control col-sm-2" name="country_code" style="font-size:14px; font-weight:bold;" placeholder="Country Code" pattern="[A-Z]{2,3}" title="Only uppercase" required>
+   <input type="text" class="form-control col-sm-3" name="city" style="font-size:14px; font-weight:bold;" placeholder="Town/City" pattern="[A-Za-z]{1,32}" title="Characters and Numbers" required>
+   <input type="text" class="form-control col-sm-3" name="street" style="font-size:14px; font-weight:bold;" placeholder="Street" pattern="[A-Za-z]{1,32}" title="Characters and Numbers" required>
+   <input type="text" class="form-control col-sm-2" name="number" style="font-size:14px; font-weight:bold;" placeholder="Number" pattern="[0-9]{1,16}" title="Only Numbers" required>
+   <input type="text" class="form-control col-sm-2" name="post_code" style="font-size:14px; font-weight:bold;" placeholder="Post Code" pattern="[0-9]{1,16}" title="Only Numbers" required>
                              <br><br><br>
                         </div>
 
@@ -209,8 +212,8 @@ window.onload=changeHashOnLoad;
                           <span class="glyphicon glyphicon-list-alt"></span> <br>
                            <label> Tax residence / </label>
                            <label> Tax ID number </label> <br>
-    <input type="text" class="form-control col-sm-5" name="tax_residence" placeholder="Recidence" pattern="[A-Z]{1,32}" title="Only uppercase" required>
-    <input type="text" class="form-control col-sm-7" name="tax_id_number" placeholder="ID Number" pattern="[0-9]{1,32}" title="Only Numbers" required>
+    <input type="text" class="form-control col-sm-5" name="tax_residence" style="font-size:17px; font-weight:bold;" placeholder="Recidence" pattern="[A-Z]{1,32}" title="Only uppercase" required>
+    <input type="text" class="form-control col-sm-7" name="tax_id_number" style="font-size:17px; font-weight:bold;" placeholder="ID Number" pattern="[0-9]{1,32}" title="Only Numbers" required>
                          <br><br>
                         </div>
 

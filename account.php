@@ -60,11 +60,10 @@ if (time()-$_SESSION['timestamp']>$idletime)
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <title> Easy bank </title>
+     <title> Easybank </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="apple-icon.png">
-    <link rel="shortcut icon" href="favicon.ico">
+         <link rel="shortcut icon" href="favicon.png" type="image/png">
 
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -205,7 +204,7 @@ function normalImg(x) {
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="home.php"> Easy Bank </a>
+                <a class="navbar-brand" href="home.php"> EasyBank </a>
                 <a class="navbar-brand active" href="home.php"><img src="images/logo5.png" alt="Logo"></a>
             </div>
 

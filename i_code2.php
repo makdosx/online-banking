@@ -90,10 +90,11 @@ if (time()-$_SESSION['timestamp']>$idletime)
            {                    
    
 
+/*
  // send pin to email //
 
 // Include and initialize phpmailer class
-require '/var/www/bank0/mail/PHPMailerAutoload.php';
+require '/var/www/easybank/mail/PHPMailerAutoload.php';
 $mail = new PHPMailer;
 
 // SMTP configuration
@@ -147,6 +148,37 @@ $mail->Body = $mailContent;
                    // $_SESSION['i_code_end'] = $i_code;
 
                     echo ("<script>location.href='transf_anyone_bank.php?i_code_one'</script>");
+
+                          }  
+
+*/
+
+
+
+$msg = " Mr,s $email your i_code for the confirm transaction is: $i_code ";
+
+$headers = "";
+$headers .= "From: Easybank <easybank@easybank.no-reply> \r\n";
+$headers .= "Reply-To:" . $email . "\r\n" ."X-Mailer: PHP/" . phpversion();
+$headers .= 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
+
+$send = mail("$email","Easybank",$msg,$headers);
+
+     if(!$send)
+               {
+                echo '<script type="text/javascript">alert("i_code error. Please try again.");
+                </script>';
+            echo ("<script>location.href='transf_anyone_bank.php'</script>");
+                 }
+
+               
+                else
+                  {
+
+              echo '<script type="text/javascript">alert("Chech your mail for i_code");
+                </script>';
+                  echo ("<script>location.href='transf_anyone_bank.php?i_code_one'</script>");
 
                           }  
 

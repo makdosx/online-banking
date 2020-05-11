@@ -31,19 +31,18 @@
 
 <head>
    
-    <title> Easy bank </title>
+    <title> Easybank </title>
 
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+         <link rel="shortcut icon" href="favicon.png" type="image/png">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
-    <link rel="apple-touch-icon" href="apple-icon.png">
-    <link rel="shortcut icon" href="favicon.ico">
 
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -61,9 +60,10 @@
 
 <style>
 body {
-    background-image: url("/images/bg1.jpg");
-    background-repeat: no-repeat, repeat;
-    background-size: 100%;
+background-image: url("images/bg1.jpg");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+background-color: ;
 }
 
 
@@ -130,39 +130,50 @@ window.onload=changeHashOnLoad;
         <div class="container">
             <div class="login-content">
                 <div class="login-logo">
-                    <a href="index.php">
-                      <!--  <img class="align-content" src="images/logo.png" alt=""> -->
-                      <h2 align="center"> <font color="white"> <b> EASY BANK ACCOUNT </b> </font> </h2>
-                    </a>
+                    <img src="images/logo4.png" height="130" width="27%">
+                    <img src="images/bg5.png" height="130" width="33%">
+                    <img src="images/logo5.png" height="130" width="27%">
                 </div>
-                <div class="login-form"  style="width: 750px; position: relative; left: -20%;">
+                <div class="login-form"  style="width: 650px; position: relative; left: -10%; 
+                                                background-color:white; 
+                                                border-style:solid; border-width:0.5em; 
+                                                border-radius: 2em;">
 
                     <form action="" method="post">
 
-                       <h2 align="center"> <font color="black"> <b> Step 1: Login Details </b> </font> </h3>
-                          <hr>
+                        <h3 align="center"> 
+                         <font color="black"> <b> <i> 
+                            &dollar; &dollar; EASYBANK ACCOUNT &euro; &euro; 
+                         </i> </b> </font>
+                       </h3> <hr>
+
+
+                       <h3 align="center"> <font color="black"> <b> Step 1: Login Details </b> </font> </h3>
+                   
 
 
                         <div class="form-group">
                             <label>Email address</label>
                             <span class="glyphicon glyphicon-envelope"></span>
-                            <input type="email" class="form-control" name="email" placeholder="Email" required>
+                       <input type="email" class="form-control" name="email" style="font-size:17px; font-weight:bold;"       
+                              placeholder="Email" required>
                         </div>
 
 
                        <div class="form-group">
                             <label>Password</label>
                              <span class="glyphicon glyphicon-lock"></span>
-                            <input type="password" class="form-control" name="password" placeholder="Password" required>
+                     <input type="password" class="form-control" name="password" style="font-size:17px; font-weight:bold;" 
+                            placeholder="Password" required>
                         </div>
 
 
                      <div class="form-group">
                             <label>Mobile number</label>
                              <span class="glyphicon glyphicon-phone"></span> <br>
-                           <input type="text" class="form-control col-sm-1" name="symbol_area_code" value="+" disabled>
-           <input type="tel" class="form-control col-sm-2" name="area_code" placeholder="Area Code" pattern="[0-9]{2,3}" required>
-                            <input type="phone" class="form-control col-sm-9" name="mobile" placeholder="Number" required>
+                      <input type="text" class="form-control col-sm-1" name="symbol_area_code" style="font-size:15px; font-weight:bold;" value="+" disabled>
+           <input type="tel" class="form-control col-sm-2" name="area_code" style="font-size:13px; font-weight:bold;" placeholder="Area Code" pattern="[0-9]{2,3}" required>
+                            <input type="phone" class="form-control col-sm-9" name="mobile" style="font-size:17px; font-weight:bold;" placeholder="Number" required>
                         </div>
 
                            <br><br>      

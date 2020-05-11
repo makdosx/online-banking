@@ -45,19 +45,16 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> Easy bank </title>
+    <title> Easybank </title>
     <meta name="description" content="Sufee Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
+     <link rel="shortcut icon" href="favicon.png" type="image/png">
  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
-    <link rel="apple-touch-icon" href="apple-icon.png">
-    <link rel="shortcut icon" href="favicon.ico">
 
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -76,8 +73,8 @@
 <style>
 body {
     background-image: url("/images/bg1.jpg");
-    background-repeat: no-repeat, repeat;
-    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 
@@ -221,19 +218,22 @@ window.onload=changeHashOnLoad;
         <div class="container">
             <div class="login-content">
                 <div class="login-logo">
-                    <a href="index.php">
-                      <!--  <img class="align-content" src="images/logo.png" alt=""> -->
-                      <h2 align="center"> <font color="white"> <b> EASY BANK ACCOUNT </b> </font> </h2>
-                    </a>
+                    <img src="images/logo4.png" height="130" width="27%">
+                    <img src="images/bg5.png" height="130" width="33%">
+                    <img src="images/logo5.png" height="130" width="27%">
                 </div>
                 <div class="login-form"  style="width: 550px; position: relative; left: 0%;">
                     <form action="" method="post" enctype="multipart/form-data">
 
-                      
-                      <h2 align="center"> <font color="black"> <b> Step 3: Your documents </b> </font> </h3>
-                          <hr>
 
-                         
+                    <h3 align="center"> 
+                         <font color="black"> <b> <i> 
+                            &dollar; &dollar; EASYBANK ACCOUNT &euro; &euro; 
+                         </i> </b> </font>
+                       </h3> <hr>
+                      
+                      <h3 align="center"> <font color="black"> <b> Step 3: Your documents </b> </font> </h3>
+           
 
 
               <div class="container">

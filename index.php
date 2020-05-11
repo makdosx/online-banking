@@ -32,18 +32,15 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-       <title> Easy bank </title>
+       <title> Easybank </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
- 
+     <link rel="shortcut icon" href="favicon.png" type="image/png">
+
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
-
-
-    <link rel="apple-touch-icon" href="apple-icon.png">
-    <link rel="shortcut icon" href="favicon.ico">
 
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -64,9 +61,10 @@
 
 body 
 {
-background-image: url("/images/bg1.jpg");
-background-repeat: no-repeat, repeat;
-background-size: 100%;
+background-image: url("images/bg1.jpg");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+background-color: ;
 }
 
 
@@ -75,6 +73,7 @@ background-size: 100%;
 max-width: 550px;
 margin: auto; 
 }
+
 
 </style>
 
@@ -91,20 +90,29 @@ margin: auto;
         <div class="container">
             <div class="login-content">
                 <div class="login-logo">
-                    <a href="index.php">
-                      <!--  <img class="align-content" src="images/logo.png" alt=""> -->
-                      <h2 align="center"> <font color="white"> <b> EASY BANK ACCOUNT </b> </font> </h2>
-                    </a>
+                       <img src="images/logo4.png" height="130" width="27%">
+                       <img src="images/bg5.png" height="130" width="33%">
+                       <img src="images/logo5.png" height="130" width="27%">
                 </div>
-                <div class="login-form">
-                    <form action="" method="post">
+                <div class="login-form" style="background-color:white; 
+                                               border-style:solid; border-width:0.5em; 
+                                               border-radius: 2em;">
+                    <form action="" method="post" >
 
+                      <h3 align="center"> 
+                         <font color="black"> <b> <i> 
+                            &dollar; &dollar; EASYBANK &euro; &euro; 
+                         </i> </b> </font>
+                       </h3> <hr>
 
                         <div class="form-group">
                             <label>Email address</label>
                               <div class="input-group">
-              <span class="input-group-addon  col-sm-1""><i class="glyphicon glyphicon-user" style="font-size:20px; vertical-align: middle;"></i></span>
-                            <input type="email" name="email" class="form-control" placeholder="Email" required>
+              <span class="input-group-addon  col-sm-1"">
+                <i class="glyphicon glyphicon-user" style="font-size:20px; vertical-align: middle;"></i>
+              </span>
+              <input type="email" name="email" class="form-control" style="font-size:17px; font-weight:bold;"  
+                     placeholder="Email" required>
                         </div>
                         </div>
 
@@ -112,17 +120,24 @@ margin: auto;
                         <div class="form-group">
                             <label>Password</label>
                            <div class="input-group">
-              <span class="input-group-addon col-sm-1"><i class="glyphicon glyphicon-lock" style="font-size:20px; vertical-align: middle;"></i></span>
-                            <input type="password" name="password" class="form-control" placeholder="Password" required>
+              <span class="input-group-addon col-sm-1">
+               <i class="glyphicon glyphicon-lock" style="font-size:20px; vertical-align: middle;"></i>
+                     </span>
+            <input type="password" name="password" class="form-control" style="font-size:17px; font-weight:bold; color:red;"
+                       placeholder="Password" required>
                              </span>
                         </div>
                        </div>
 
+
                        <div class="form-group">
                             <label>Pin</label>
                            <div class="input-group">
-          <span class="input-group-addon col-sm-1"><i class="glyphicon glyphicon-info-sign" style="font-size:20px; vertical-align: middle;"></i></span>
-                            <input type="password" name="pin" class="form-control" placeholder="Pin" required>
+                <span class="input-group-addon col-sm-1">
+                 <i class="glyphicon glyphicon-info-sign" style="font-size:20px; vertical-align: middle;"></i> 
+              </span>
+           <input type="password" name="pin" class="form-control" style="font-size:17px; font-weight:bold; color:red;"
+                  placeholder="Pin" required>
                         </div>
                        </div>
 

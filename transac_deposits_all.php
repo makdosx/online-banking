@@ -48,6 +48,12 @@ if (time()-$_SESSION['timestamp']>$idletime)
 <html>
 <head>
 
+ <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <title> Easybank </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+         <link rel="shortcut icon" href="favicon.png" type="image/png">
 
 <style>
 

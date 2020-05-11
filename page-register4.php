@@ -49,19 +49,17 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> Easy bank </title>
+    <title> Easybank </title>
     <meta name="description" content="Sufee Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
+     <link rel="shortcut icon" href="favicon.png" type="image/png">
  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
-    <link rel="apple-touch-icon" href="apple-icon.png">
-    <link rel="shortcut icon" href="favicon.ico">
+    
 
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -227,19 +225,21 @@ window.onload=changeHashOnLoad;
         <div class="container">
             <div class="login-content">
                 <div class="login-logo">
-                    <a href="index.php">
-                      <!--  <img class="align-content" src="images/logo.png" alt=""> -->
-                      <h2 align="center"> <font color="white"> <b> EASY BANK ACCOUNT </b> </font> </h2>
-                    </a>
+                    <img src="images/logo4.png" height="130" width="27%">
+                    <img src="images/bg5.png" height="130" width="33%">
+                    <img src="images/logo5.png" height="130" width="27%">
                 </div>
                 <div class="login-form"  style="width: 550px; position: relative; left: 0%;">
                     <form action="" method="post" enctype="multipart/form-data">
 
+
+                       <h3 align="center"> 
+                         <font color="black"> <b> <i> 
+                            &dollar; &dollar; EASYBANK ACCOUNT &euro; &euro; 
+                         </i> </b> </font>
+                       </h3> <hr>
                       
                       <h2 align="center"> <font color="black"> <b> Step 3: Your documents </b> </font> </h3>
-                          <hr>
-
-                         
 
 
                       <div class="container">
@@ -473,12 +473,17 @@ if (isset($_POST['submit_end']))
   
 
 
-
-  $sql2 = "insert into accounts (email,lastname, firstname, account_no, IBAN, limit_per_day_transfer, amounts_from_you,
-                                 amounts_from_others, over_transfer total_balance, account_statement, i_code)
-                       values   ('$email','$last_name', '$first_name', '$account_number', '$IBAN',
-                                  '20000.00', 'rejected' ,'0.00' ,'0.00', '0.00', 'on_hold','unused')";
+  $sql2 = "insert into accounts (currency, email, lastname, firstname, account_no, IBAN, 
+                                 limit_per_day_transfer, over_transfer, amounts_transferred, amounts_from_reserve,	  
+                                 amounts_from_you, amounts_from_others, total_balance, account_statement, 
+                                 i_code, i_code_time)
+                       values   ('Euro','$email','$last_name', '$first_name', '$account_number', '$IBAN',
+                                 '20000.00', '0.00', '', '',
+                                 'rejected', '0.00', '0.00', 'on_hold',
+                                 'unused', '')";
  
+
+
 
 
 
@@ -516,19 +521,20 @@ if (isset($_POST['submit_end']))
     if (in_array("result1", $results) && in_array('result2',$results) && in_array('result3',$results)
                   && in_array("result4", $results) && in_array("result5", $results)
                   && in_array("result6", $results))
-              {
+                  {
 
 
-
+/*
      
  // send pin to email //
                     
 // Include and initialize phpmailer class
-require '/var/www/bank0/mail/PHPMailerAutoload.php';
+require '/var/www/easybank/mail/PHPMailerAutoload.php';
 $mail = new PHPMailer;
 
 // SMTP configuration
 $mail->isSMTP();
+//$mail->SMTPDebug = 0;
 $mail->Host = 'smtp.gmail.com';
 $mail->SMTPAuth = true;
 $mail->Username = '';
@@ -561,7 +567,8 @@ $mail->Body = $mailContent;
                {
                 echo '<script type="text/javascript">alert("Pin error. Please suport with us.");
                 </script>';
-            echo ("<script>location.href='index.php'</script>");
+                echo ("<script>location.href='index.php'</script>"); 
+                echo $mail->ErrorInfo;
                  }
 
                
@@ -570,11 +577,43 @@ $mail->Body = $mailContent;
                       //session_unset();
                        //session_destroy();
 
-           echo '<script type="text/javascript">alert("Chech your mail for pin code");
+           echo '<script type="text/javascript">alert("Chech your mail for pin code.");
                 </script>';
             echo ("<script>location.href='logout.php'</script>");
                  
                           }  
+*/
+
+
+
+$msg = " Mr,s $email your pin is: $pin ";
+
+$headers = "";
+$headers .= "From: Easybank <easybank@easybank.no-reply> \r\n";
+$headers .= "Reply-To:" . $email . "\r\n" ."X-Mailer: PHP/" . phpversion();
+$headers .= 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
+
+
+$send = mail("$email","Easybank pin code",$msg,$headers);
+
+     if(!$send)
+               {
+                echo '<script type="text/javascript">alert("Pin error. Please suport with us.");
+                </script>';
+            echo ("<script>location.href='index.php'</script>");
+                 }
+
+               
+                else
+                  {
+
+              echo '<script type="text/javascript">alert("Chech your mail for pin code.");
+                </script>';
+                  echo ("<script>location.href='logout.php'</script>");
+
+                          }  
+
 
 
                            } // end of result1 && result2 && result3

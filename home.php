@@ -58,10 +58,10 @@ if (time()-$_SESSION['timestamp']>$idletime)
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <title> Easy bank </title>
+     <title> Easybank </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" href="favicon.ico">
+         <link rel="shortcut icon" href="favicon.png" type="image/png">
 
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -157,7 +157,7 @@ function normalImg(x) {
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="home.php"> Easy Bank </a>
+                <a class="navbar-brand" href="home.php"> EasyBank </a>
                 <a class="navbar-brand active" href="home.php"><img src="images/logo5.png" alt="Logo"></a>
             </div>
 
@@ -383,22 +383,25 @@ require_once('__SRC__/connect.php');
 
                  $email = $_SESSION['login'];
 
-                 $sql_details_user = "select lastname, firstname from customers where email = '$email'"; 
+                 $sql_details_user = "select lastname, firstname, account_number, IBAN 
+                                      from customers 
+                                      where email = '$email'"; 
                  $result_details_user = $conn->query($sql_details_user);
                  $row_details_user = $result_details_user->fetch_assoc();
 
                  $lastname  = ucfirst($row_details_user['lastname']);
                  $firstname = ucfirst($row_details_user['firstname']);
-
+                 $acc_number = $row_details_user['account_number'];
+                 $iban = $row_details_user['IBAN'];
 
 
 
        echo "<div class='breadcrumbs'>
 
-            <div class='col-sm-4'>
+            <div class='col-sm-12'>
                 <div class='page-header float-left'>
                     <div class='page-title'>
-                        <h1> Welcome to Easy Bank <br> <b> $lastname $firstname </b> </h1>
+                        <h1> Welcome to Easy Bank <b> $lastname $firstname <b> </h1>
                     </div>
                 </div>
             </div>";
@@ -412,11 +415,13 @@ require_once('__SRC__/connect.php');
             while ($row0 = $result0->fetch_assoc())
                {
 
-           echo "<div class='col-sm-8'>
+           echo "<div class='col-sm-12'>
                 <div class='page-header float-right'>
                     <div class='page-title'>
                         <ol class='breadcrumb text-right'>
-                            <li class='active'> Your balance: {$row0['total_balance']} <i class='fa fa-euro'></i> </li>
+                             <li> Account Number: $acc_number </li>
+                             <li> IBAN: $iban </li>
+                            <li class='active'>  Your balance: {$row0['total_balance']} <i class='fa fa-euro'></i> </li>
                         </ol>
                     </div>
                 </div>

@@ -58,11 +58,10 @@ if (time()-$_SESSION['timestamp']>$idletime)
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <title> Easy bank </title>
+     <title> Easybank </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="apple-icon.png">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
 
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -196,7 +195,7 @@ function ClearForm()
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="home.php"> Easy Bank </a>
+                <a class="navbar-brand" href="home.php"> EasyBank </a>
                 <a class="navbar-brand active" href="home.php"><img src="images/logo5.png" alt="Logo"></a>
             </div>
 
@@ -599,11 +598,11 @@ if(isset($_POST['stripeToken']))
         <div class="container">
             <div class="login-content">
                 <div class="login-logo">
-                     <img class="align-content" src="images/menu/transf0.png" height="70" width="80" alt=""> 
-                      <h2 align="center"> <font color="grey"> <b> Easy Bank Cards  </b> </font> </h2>
+                     <img class="align-content" style="position: relative; left: -60%;" src="images/menu/transf0.png" height="70" width="80" alt=""> 
+                      <h2 style="position: relative; left: -60%;"> <font color="grey"> <b> Easy Bank Cards  </b> </font> </h2>
                 </div>
 
-                <div class="login-form"  style="width: 650px; position: relative; left: -10%;">
+                <div class="login-form"  style="width: 550px; position: relative; left: -60%;">
 
 
          <form action="" method="POST" id="payment-form">
@@ -615,13 +614,13 @@ if(isset($_POST['stripeToken']))
               <i class="fa fa-user-o" style="font-size:16px;"></i> &nbsp;
               <label> Recipient </label> 
 
-              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+
 
 
                  
 
-              <select class="form-control col-sm-6" id="sel1" name="recipient">
+              <select class="form-control col-sm-8" id="sel1" name="recipient">
             
              <?php
 
@@ -686,12 +685,11 @@ if(isset($_POST['stripeToken']))
 
 	   <i class="fa fa-money" style="font-size:18px;"></i> &nbsp;
            <label> Ammount </label> <br>
- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-     &nbsp; &nbsp;
-          <input type="text" class="form-control col-sm-3" name="main_amount" placeholder="####"
+            &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; 
+          <input type="text" class="form-control col-sm-4" name="main_amount" placeholder="####"
       data-stripe="number" pattern="[0-9]{1,7}" title="Only Numbers (up to 7 digits)" required> &nbsp;
           
-       <input type="text" class="form-control col-sm-2" name="secondary_amount" placeholder="##" 
+       <input type="text" class="form-control col-sm-3" name="secondary_amount" placeholder="##" 
           data-stripe="number" pattern="[0-9]{1,2}" title="Only Numbers (up to 2 digits)" required> &nbsp;
          
        <input type="text" class="form-control col-sm-1" style="text-align:center;" name="currency" value="&euro;" disabled> 
@@ -708,8 +706,8 @@ if(isset($_POST['stripeToken']))
      
               <i class="fa fa-credit-card" style="font-size:17px;"></i> &nbsp;
               <label> Card Number </label> 
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <input type="text" class="form-control col-sm-6" name="card_number" 
+                &nbsp; &nbsp;
+            <input type="text" class="form-control col-sm-8" name="card_number" 
                    data-stripe="number" placeholder="#### #### #### ####" pattern="[0-9]{16}" 
                    title="Only Digits (16 digits required)" required>
 
@@ -722,21 +720,21 @@ if(isset($_POST['stripeToken']))
  <div class="form-group form-inline">
      
               <i class="fa fa-credit-card" style="font-size:17px;"></i> &nbsp;
-              <label> EXPIRATION (MM/YY) </label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <label> EXPIRATION </label> &nbsp; &nbsp; 
     
-            <input type="text" class="form-control col-sm-1" name="exp_day" placeholder="MM" 
+            <input type="text" class="form-control col-sm-2" name="exp_day" placeholder="MM" 
                 data-stripe="exp_month" pattern="[0-9]{1,2}" title="Only Digits (1 or 2 digits required)" required>
                     
                    &nbsp; / &nbsp;
               
-            <input type="text" class="form-control col-sm-1" name="exp_year" placeholder="YY" 
+            <input type="text" class="form-control col-sm-2" name="exp_year" placeholder="YY" 
                    data-stripe="exp_year" pattern="[0-9]{2}" title="Only Digits (2 digits required)" required>
 
-                   &nbsp; &nbsp; &nbsp;
+                   &nbsp; &nbsp; 
 
              <i class="fa fa-credit-card" style="font-size:17px;"></i> &nbsp;
              <label> CVC </label> 
-                   &nbsp;
+                   &nbsp; &nbsp;
             <input type="text" class="form-control col-sm-2" name="cvc" placeholder="###" 
                    data-stripe="cvc" pattern="[0-9]{3}" title="Only Digits (3 digits required)" required>
 

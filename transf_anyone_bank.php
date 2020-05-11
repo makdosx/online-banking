@@ -59,11 +59,10 @@ if (time()-$_SESSION['timestamp']>$idletime)
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <title> Easy bank </title>
+     <title> Easybank </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="apple-icon.png">
-    <link rel="shortcut icon" href="favicon.ico">
+     <link rel="shortcut icon" href="favicon.png" type="image/png">
 
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -197,7 +196,7 @@ function ClearForm()
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="home.php"> Easy Bank </a>
+                <a class="navbar-brand" href="home.php"> EasyBank </a>
                 <a class="navbar-brand active" href="home.php"><img src="images/logo5.png" alt="Logo"></a>
             </div>
 
@@ -490,10 +489,12 @@ require_once('__SRC__/connect.php');
            {                    
    
 
+/*
+
  // send pin to email //
 
 // Include and initialize phpmailer class
-require '/var/www/bank0/mail/PHPMailerAutoload.php';
+require '/var/www/easybank/mail/PHPMailerAutoload.php';
 $mail = new PHPMailer;
 
 // SMTP configuration
@@ -546,6 +547,38 @@ $mail->Body = $mailContent;
 
                           }  
 
+*/
+
+
+
+
+$msg = " Mr,s $email your i_code for the confirm transaction is: $i_code ";
+
+$headers = "";
+$headers .= "From: Easybank <easybank@easybank.no-reply> \r\n";
+$headers .= "Reply-To:" . $email . "\r\n" ."X-Mailer: PHP/" . phpversion();
+$headers .= 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
+
+$send = mail("$email","Easybank",$msg,$headers);
+
+     if(!$send)
+               {
+                echo '<script type="text/javascript">alert("i_code error. Please try again.");
+                </script>';
+            echo ("<script>location.href='transf_anyone_bank.php'</script>");
+                 }
+
+               
+                else
+                  {
+
+              echo '<script type="text/javascript">alert("Chech your mail for i_code");
+                </script>';
+                  echo ("<script>location.href='transf_anyone_bank.php?i_code_one'</script>");
+
+                          }  
+
 
                       } // end of result
 
@@ -574,11 +607,11 @@ $mail->Body = $mailContent;
         <div class="container">
             <div class="login-content">
                 <div class="login-logo">
-                     <img class="align-content" src="images/menu/transf0.png" height="70" width="80" alt=""> 
-                      <h2 align="center"> <font color="grey"> <b> Anyone Bank Transfer </b> </font> </h2>
+                     <img class="align-content" style="position: relative; left: -10%;" src="images/menu/transf0.png" height="70" width="80" alt=""> 
+                      <h2 style="position: relative; left: -10%;"> <font color="grey"> <b> Anyone Bank Transfer </b> </font> </h2>
                 </div>
 
-                <div class="login-form"  style="width: 750px; position: relative; left: -20%;">
+                <div class="login-form"  style="width: 550px; position: relative; left: -10%;">
 
 
        <form action="" method="post">
@@ -587,10 +620,10 @@ $mail->Body = $mailContent;
          <div class="form-group form-inline">
 
               <i class="fa fa-user-o" style="font-size:16px;"></i> &nbsp;
-              <label> Recipient (Max 70 chars) </label> &nbsp; &nbsp;
+              <label> Recipient  </label> &nbsp; &nbsp;
 
-            <input type="text" class="form-control col-sm-3" name="firstname" placeholder="FirstName" pattern="[A-Za-z]{1,32}" title="Only Characters (up to 32 characters)" required>
-                 &nbsp;
+            <input type="text" class="form-control col-sm-4" name="firstname" placeholder="FirstName" pattern="[A-Za-z]{1,32}" title="Only Characters (up to 32 characters)" required>
+                 &nbsp; &nbsp;
             <input type="text" class="form-control col-sm-4" name="lastname" placeholder="LastName" pattern="[A-Za-z]{1,48}" title="Only Characters (up to 48 characters)" required>
 
          </div>
@@ -602,12 +635,10 @@ $mail->Body = $mailContent;
           <div class="form-group form-inline">
      
               <i class="fa fa-credit-card" style="font-size:17px;"></i> &nbsp;
-              <label> IBAN </label> 
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                &nbsp; &nbsp; &nbsp; &nbsp; 
+              <label> IBAN (xxxx) </label> 
+                &nbsp; &nbsp; 
 
-         <input type="text" class="form-control col-sm-7" name="IBAN" placeholder="e.g.: EA#########################" 
+         <input type="text" class="form-control col-sm-8" name="IBAN" placeholder="e.g.: EA#########################" 
            pattern="[A-Z]{2}[0-9]{13,32}" title="The first two uppercase letters and then up to 32 digits" required>
 
           </div>
@@ -620,11 +651,11 @@ $mail->Body = $mailContent;
 
 	   <i class="fa fa-money" style="font-size:18px;"></i> &nbsp;
            <label> Ammount </label> <br>
- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp;
      
           <input type="text" class="form-control col-sm-3" name="main_amount" placeholder="####" pattern="[0-9]{1,7}" title="Only Numbers (up to 7 digits)" required> &nbsp;
           
-       <input type="text" class="form-control col-sm-2" name="secondary_amount" placeholder="##" pattern="[0-9]{1,2}" title="Only Numbers (up to 2 digits)" required> &nbsp;
+       <input type="text" class="form-control col-sm-3" name="secondary_amount" placeholder="##" pattern="[0-9]{1,2}" title="Only Numbers (up to 2 digits)" required> &nbsp;
          
        <input type="text" class="form-control col-sm-2" style="text-align:center;" name="currency" value="EUR" disabled> 
         
@@ -641,7 +672,7 @@ $mail->Body = $mailContent;
               <i class="fa fa-envelope-open-o" style="font-size:16px;"></i> &nbsp;
               <label> Transfer reason </label> &nbsp; &nbsp;
   
-           <textarea class="form-control" name="reason" rows="2" id="reason"></textarea>
+           <textarea class="form-control" name="reason" rows="2" id="reason" style="width:95%"></textarea>
 
         </div>
 
@@ -653,11 +684,11 @@ $mail->Body = $mailContent;
 
              <i class="fa fa-camera-retro" style="font-size:18px;"></i> &nbsp;
              <label> Transfer code? </label>
-              &nbsp; &nbsp;
+              &nbsp;
            
              <a href="i_code2.php" onclick="return clearForm(this.form);"> 
                    <font color="black"> Resend </font>  </a>
-                  &nbsp; &nbsp;  &nbsp; &nbsp; 
+                  &nbsp; 
 
                 <script>
                 function clearForm(form) {
@@ -724,7 +755,7 @@ function countdown2( elementName, minutes, seconds )
     updateTimer();
 }
 
-countdown( "countdown2", 3, 0 );
+countdown( "countdown2", 10, 0 );
 </script>
 
         </div>
@@ -735,7 +766,7 @@ countdown( "countdown2", 3, 0 );
 
      <div class="wrapper">
         <span class="group-btn">     
-          <button type="submit" name="transfer_anyone_bank" class="btn btn-primary btn-flat m-b-30 m-t-30"> 
+          <button type="submit" name="transfer_anyone_bank" class="btn btn-primary btn-flat m-b-30 m-t-30" style="width:95%"> 
            Transfer &nbsp; &nbsp; 
            <img src="images/menu/transfer3.png" style="height:28px; width:28px; fill: green;"></i> 
           </button>

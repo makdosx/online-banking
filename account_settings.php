@@ -53,7 +53,11 @@ if (time()-$_SESSION['timestamp']>$idletime)
 
 <head>
 
+     <title> Easybank </title>
+     <link rel="shortcut icon" href="favicon.png" type="image/png">
+
   <meta HTTP-EQUIV="REFRESH" content="900; url=/logout.php">
+
 
 
   <meta charset="UTF-8">
