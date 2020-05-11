@@ -29,10 +29,10 @@
  public function __construct()
  {
 
-  $this->connect[0] = "";
-  $this->connect[1] = "";
-  $this->connect[2] = "";
-  $this->connect[3] = "";
+  $this->connect[0] = "localhost";
+  $this->connect[1] = "easybank";
+  $this->connect[2] = "easybank";
+  $this->connect[3] = "easybank";
   
   }
 
