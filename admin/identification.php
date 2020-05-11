@@ -53,7 +53,11 @@ session_start();
 
 <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
 
+
+
 <style class="cp-pen-styles">
+
+
 h1{
   font-size: 30px;
   color: #fff;
@@ -68,12 +72,14 @@ table{
 }
 .tbl-header{
   background-color: rgba(255,255,255,0.3);
+color: white;
  }
 .tbl-content{
   height:600px;
   overflow-x:auto;
   margin-top: 0px;
   border: 1px solid rgba(255,255,255,0.3);
+color: white;
 }
 th{
   padding: 20px 15px;
@@ -82,6 +88,7 @@ th{
   font-size: 12px;
   color: black;
   text-transform: uppercase;
+color: white;
 }
 td{
   padding: 15px;
@@ -91,6 +98,7 @@ td{
   font-size: 12px;
   color: black;
   border-bottom: solid 1px rgba(255,255,255,0.1);
+color: white;
 }
 
 
@@ -99,8 +107,8 @@ td{
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
 body{
-  background: -webkit-linear-gradient(left, #25c481, #25b7c4);
-  background: linear-gradient(to right, #25c481, #25b7c4); 
+  background: -webkit-linear-gradient(left, brown, brown);
+  background: linear-gradient(to right, brown, brown); 
   font-family: 'Roboto', sans-serif;
 }
 
@@ -127,14 +135,14 @@ section{
 a
 {
 text-decoration: none;
-color: black;
+color: white;;
 }
 
 
 a:hover
 {
 text-decoration: none;
-color: white;
+color: black;
 }
 
 
@@ -330,7 +338,7 @@ ini_set('display_errors', TRUE);
          <input type='hidden' name='id_account_condition' value='{$row['id']}'>
          <input type='radio' name='account_condition' value='block' $acc_condition1> Block 
          <input type='radio' name='account_condition' value='active' $acc_condition2> Active  
-         <input type='submit' name='submit_account_condition' value='Enter'>
+         <input type='submit' name='submit_account_condition' value='Enter' style='color:black;'>
        </form> 
 
          </td> 

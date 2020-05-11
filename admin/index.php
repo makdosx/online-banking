@@ -44,8 +44,8 @@
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
 body{
-  background: -webkit-linear-gradient(left, #25c481, #25b7c4);
-  background: linear-gradient(to right, #25c481, #25b7c4);
+  background: -webkit-linear-gradient(left, brown brown);
+  background: linear-gradient(to right, brown, brown);
   font-family: 'Roboto', sans-serif;
 }
       
@@ -63,10 +63,11 @@ body{
 
  <div class="container">
     <div class="col-xs-12 col-sm-12 col-md-12">
-
-      <img src="logo.png" class="img-responsive" height="280px;" width="280px;">
+      <font color="white">
+      <img src="logo.png"  height="250px;" width="280px;">
       <div class="row">
         <h3 class="text-center" style="padding-right: 80px;"> Easy bank </h3>
+     </font>
       </div>
 
 
