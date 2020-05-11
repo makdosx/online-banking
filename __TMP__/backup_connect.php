@@ -30,19 +30,19 @@
  public function __construct()
  {
 
-  $this->connect[0] = "host";
-  $this->connect[1] = "user";
-  $this->connect[2] = "pass";
+  $this->connect[0] = "localhost";
+  $this->connect[1] = "easybank";
+  $this->connect[2] = "easybank";
 
-  $this->connect_db1[0] = "host";
-  $this->connect_db1[1] = "user";
-  $this->connect_db1[2] = "pass";
-  $this->connect_db1[3] = "db";
+  $this->connect_db1[0] = "localhost";
+  $this->connect_db1[1] = "easybank";
+  $this->connect_db1[2] = "easybank";
+  $this->connect_db1[3] = "easybank";
 
-  $this->connect_db2[0] = "host";
-  $this->connect_db2[1] = "user";
-  $this->connect_db2[2] = "pass";
-  $this->connect_db2[3] = "db";
+  $this->connect_db2[0] = "localhost";
+  $this->connect_db2[1] = "easybank";
+  $this->connect_db2[2] = "easybank";
+  $this->connect_db2[3] = "easybank_2";
   
   }
 
